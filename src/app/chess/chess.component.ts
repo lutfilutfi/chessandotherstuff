@@ -20,7 +20,7 @@ export class ChessComponent implements OnInit {
   playMove(x:number,y:number,z:number,w:number){
     this.board.playMove([x,y],[z,w]);
     this.boardUpdate();
-    if(this.board.isGameOver){
+    if(this.board.isGameOver){//hello
       this.showGameOver();
     }
   }
