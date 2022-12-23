@@ -16,8 +16,8 @@ export class Board{
             [null,null,null,null,null,null,null,null,],
             [null,null,null,null,null,null,null,null,],
             [null,null,null,null,null,null,null,null,],
-            [new Piece('rook','black'),new Piece('knight','black'),new Piece('bishop','black'),new Piece('queen','black'),new Piece('king','black'),new Piece('bishop','black'),new Piece('knight','black'),new Piece('rook','black')],
             [new Piece('pawn','black'),new Piece('pawn','black'),new Piece('pawn','black'),new Piece('pawn','black'),new Piece('pawn','black'),new Piece('pawn','black'),new Piece('pawn','black'),new Piece('pawn','black')],
+            [new Piece('rook','black'),new Piece('knight','black'),new Piece('bishop','black'),new Piece('queen','black'),new Piece('king','black'),new Piece('bishop','black'),new Piece('knight','black'),new Piece('rook','black')],
         ]
     }
     playMove([a,b]:[number,number],[c,d]:[number,number]){
