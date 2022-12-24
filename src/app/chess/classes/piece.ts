@@ -5,6 +5,7 @@ export class Piece{
     strength:number;
     name:string;
     icon:string;
+    selected:boolean=false;
     constructor(name:string,colour:string){
         switch(name){
             case 'pawn':
@@ -57,6 +58,9 @@ export class Piece{
                 break
             default:break
         }
+    }
+    selectPiece(){
+        this.selected=!this.selected
     }
     checkValidMove([a,b]:[number,number]):boolean{
         return true;

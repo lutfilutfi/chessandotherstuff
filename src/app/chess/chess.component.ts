@@ -9,6 +9,8 @@ import { Board } from './classes/board';
 export class ChessComponent implements OnInit {
 
   board:Board;
+  selected:boolean=false;
+  selectedPieceCordinates:[number,number];
 
   constructor() {
     this.board=new Board();
@@ -36,4 +38,18 @@ export class ChessComponent implements OnInit {
     this.resetGame();
   }
 
+  selectPiece(x:number,y:number){
+    if(!this.selected){
+      this.board.grid[x][y]?.selectPiece();
+      this.selectedPieceCordinates=[x,y];
+      this.selected=true
+    }
+    else{
+      this.selected=!this.selected
+      this.board.grid[this.selectedPieceCordinates[0]][this.selectedPieceCordinates[1]]?.selectPiece();
+      this.playMove(this.selectedPieceCordinates[0],this.selectedPieceCordinates[1],x,y);
+      this.selected=false;
+    }
+    console.log('function called on',x,y,this.board.grid[x][y]?.selected);
+  }
 }

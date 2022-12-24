@@ -14,7 +14,8 @@
         <tr *ngFor="let x of [8,7,6,5,4,3,2,1]">
             <th>{{x}}</th>
             <td *ngFor="let piece of board.grid[x-1];index as i"
-            class="{{(x+i)%2==0?'light':'dark'}}">{{piece?piece.icon:''}}</td>
+            class="{{(x+i)%2==0?'light':'dark'}}{{piece?.selected?'-selected':''}}"
+            (click)="selectPiece(x-1,i)">{{piece?piece.icon:''}}</td>
         </tr>
     </tbody>
 </table>
