@@ -39,17 +39,22 @@ export class ChessComponent implements OnInit {
   }
 
   selectPiece(x:number,y:number){
-    if(!this.selected){
-      this.board.grid[x][y]?.selectPiece();
-      this.selectedPieceCordinates=[x,y];
-      this.selected=true
-    }
-    else{
-      this.selected=!this.selected
-      this.board.grid[this.selectedPieceCordinates[0]][this.selectedPieceCordinates[1]]?.selectPiece();
-      this.playMove(this.selectedPieceCordinates[0],this.selectedPieceCordinates[1],x,y);
-      this.selected=false;
-    }
+    
+      if(!this.selected){
+        if(this.board.grid[x][y]!==null){
+        this.board.grid[x][y]?.selectPiece();
+        this.selectedPieceCordinates=[x,y];
+        this.selected=true
+        }
+      }
+      else{
+        this.selected=!this.selected
+        this.board.grid[this.selectedPieceCordinates[0]][this.selectedPieceCordinates[1]]?.selectPiece();
+        this.playMove(this.selectedPieceCordinates[0],this.selectedPieceCordinates[1],x,y);
+        this.selected=false;
+        this.selectedPieceCordinates=[10,10];
+      }
+  
     console.log('function called on',x,y,this.board.grid[x][y]?.selected);
   }
 }

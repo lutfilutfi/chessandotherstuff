@@ -9,5 +9,5 @@
         .chess-board td { width: 3em; height: 3em; text-align: center; font-size: 35px; line-height: 0;}
         .chess-board .light { background: #eee; }
         .chess-board .light-selected { background: rgb(139, 138, 138); }
-        .chess-board .dark { background: rgb(58, 58, 58); }
-        .chess-board .dark-selected { background: rgb(15, 15, 15); }
+        .chess-board .dark { background: rgb(84, 181, 71); }
+        .chess-board .dark-selected { background: rgb(27, 139, 27); }

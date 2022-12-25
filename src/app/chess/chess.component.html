@@ -15,7 +15,7 @@
             <th>{{x}}</th>
             <td *ngFor="let piece of board.grid[x-1];index as i"
             class="{{(x+i)%2==0?'light':'dark'}}{{piece?.selected?'-selected':''}}"
-            (click)="selectPiece(x-1,i)">{{piece?piece.icon:''}}</td>
+            (click)="selectPiece(x-1,i)"><h1>{{piece?piece.icon:''}}</h1></td>
         </tr>
     </tbody>
 </table>

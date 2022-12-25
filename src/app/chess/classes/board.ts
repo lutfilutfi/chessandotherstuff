@@ -23,6 +23,7 @@ export class Board{
     playMove([a,b]:[number,number],[c,d]:[number,number]){
         if(this.checkValidMove(a,b,c,d)){
             this.grid[c][d]=this.grid[a][b];
+            if(!((a===c)&&(b===d)))
             this.grid[a][b]=null;
         }
     }
